@@ -95,7 +95,7 @@ class LinkedList {
         if (index === this.length) return this.push(value)
         if (index < 0 || index > this.length) return false
 
-        const newnode = new Node(value)
+        const newNode = new Node(value)
         const temp = this.get(index - 1)
 
         newNode.next = temp.next
