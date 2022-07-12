@@ -104,6 +104,20 @@ class LinkedList {
 
         return true
     }
+    
+    remove(index) {
+        if (index === 0) return this.shift()
+        if (index === this.length) return this.pop()
+
+        const before = this.get(index - 1)
+        const temp = before.next
+
+        before.next = temp.next
+        temp.next = null
+        this.length--
+
+        return temp        
+    }
 }
     
 
