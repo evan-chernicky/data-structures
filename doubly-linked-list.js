@@ -149,6 +149,19 @@ class DoublyLinkedList {
         
     }
 
+    reverse() {
+        let temp = this.head
+        this.head = this.tail
+        this.tail = temp
+ 
+        for (let i = 0; i < this.length; i++) { 
+           let before = temp.prev
+           temp.prev = temp.next
+           temp.next = before
+           temp = temp.prev
+        }
+     }
+
     
 }
 
