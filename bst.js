@@ -43,11 +43,34 @@ class BST {
             }
         }
     }
+
+    //if root === null return false
+    //let temp = this.root
+    //while (temp)
+        //if < left 
+        //else if > right
+        // else if value === temp return true
+
+    contains(value) {
+        if (this.root === null) return false
+        let temp = this.root
+        while (temp) {
+            if (value < temp.value) {
+                temp = temp.left
+            } else if (value > temp.value) {
+                temp = temp.right
+            } else {
+                return true
+            }
+        }
+        return false        
+    }
     
 
 }
 
 
 let myBST = new BST()
+
 
 myBST
